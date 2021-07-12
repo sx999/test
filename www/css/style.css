@@ -1,0 +1,352 @@
+/* @font-face { 
+    font-family: ‘XXXXX’; / 字体名称 / 
+    src: url(‘../font/alida.ttf’); / 字体源文件 / 
+    } 
+    body{font-family: “字体名称 ”}。 */
+body{
+    font-family:'';
+    padding:13px;
+    padding-bottom: 60px;
+    background-color: #3084C3;
+}
+/* //遮罩层 */
+#mask{
+    width:100%;
+    height:100vh;
+    background:gray;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:100;
+    background-color: rgba(0,0,0,0.32);
+    display: none;
+    overflow-y: hidden;
+}
+#popimg{
+    position: fixed;
+    left: 25%; 
+    top: calc(40% - 35px);
+    animation: popimg cubic-bezier(1, 0, 0.35, 1.4) 1.5s 1;
+    background-color:#f6941d;
+    border-radius: 10px;
+    box-shadow:2px 2px 3px rgba(156, 129, 129, 0.3);
+} @keyframes popimg {
+    from {
+      top: -100px;
+    }
+    to {
+      top: calc(40% - 35px);
+    }
+  }
+/* header style */
+.header{
+    background-color: #ffffff;
+}
+.header-div{
+    padding: 0 15px;
+}
+.header-title{
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.header-text{
+    font-size: 15px;
+    color: #797979;
+    text-indent: 30px;
+    line-height:28px;
+}
+.header-refer{
+    font-size: 15px;
+    color: #797979;
+    padding: 20px 30px;
+}
+.header-refer p:nth-child(1){
+    margin-bottom: 20px;
+}
+/* 表单项 */
+.row{
+    position: relative;
+    margin: 0;
+    background-color: #ffffff;
+}
+
+/* bootstrap  from全局样式 */
+label{
+    font-size: 15px;
+}
+.form-control{
+    display: flex;
+    height:37px;
+    align-items: center;
+    padding: 6px 8px;
+    border-radius:0;
+    border: 1px solid #E2E2E2;
+    /* font-size: 1.4rem; */
+}
+
+/* 弹框出现防止滑动 */
+.fix{
+    height: 100%;
+    overflow:hidden;
+}
+/* 带图标的input */
+.rela{
+    padding-left: 9%; 
+    position: relative;
+}
+/* 相对于input定位的图标 */
+.back-img{
+    width:15px;
+    position: absolute;
+    top: 60%;
+    left: 6%;
+    z-index: 98;
+}
+input::-webkit-input-placeholder{
+   position: relative;
+   top: 0.5px;
+} 
+/* 发送验证码 css */
+#btn-note{
+    position: absolute;
+    top: 58%;
+    right: 4.2%;
+    width: 100px;
+    font-size: 12px;
+    border-left: 1px solid #CFCFCF;
+    text-align: center;
+    color: #52B5FF;
+}
+#btn-data{
+    height: 20px;
+    line-height:22px;
+    border: none;
+    outline:none;
+    background-color: #fff;
+}
+/* 浮动图片  电话 */
+#ring-up{
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 53px;
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.5);
+    position: fixed;
+    top: 50%;
+    right: 5%;
+    z-index: 99;
+    background-color: #ffffff;
+    display: none;
+    
+}
+#ring-up img{
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    /* -webkit-animation: free_download 1.3s linear alternate infinite;
+    animation: free_download 1.3s linear alternate infinite; */
+}
+
+/* @-webkit-keyframes free_download{
+    0%{-webkit-transform:scale(0.8);}
+    100%{-webkit-transform:scale(1);}
+}   
+@keyframes free_download{
+    0%{transform:scale(0.8);}
+    100%{transform:scale(1);}
+} */
+/* 必填项 */
+.must:before{
+  content:"*";
+  color:red;
+  font-size: 13px;
+}
+/* 年月日input style */
+.form-group .selectmin{
+    width: 25%;
+    display: inline-block;
+    text-align: center;
+    background-color: #fff;
+}
+
+/* 伪单选框 */
+.checkdiv{
+    height: 36px;
+    padding-left: 9px;
+    /* padding: 6px 12px; */
+    border: 1px solid #c6c6c6;
+    /* line-height: 1.42857143; */
+    color: #555;
+    display: flex;
+    align-items: center;
+    /* font-size: 1.4rem; */
+}
+/* 去除上下边框 */
+.bordernone{
+    border-top: none;
+    border-bottom: none;
+}
+.bor-none{
+    border: none;
+    padding-left:0;
+    display: flex;
+    justify-content: center;
+}
+#group-click{
+    position: relative;
+}
+.group-click-on{
+    position: absolute;
+    top: 26%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 0;
+    height: 170px;
+    width: 32%;
+    border-radius: 13px;
+    box-shadow: 0px 0px 8px rgba(150,150,150,0.5);
+    background-color: #fff;
+}
+input[type="checkbox"]{
+    margin: 0px 5px 0px 0px;
+}
+/* 下拉框样式 */
+select:invalid { color: #CFCFCF;}
+ 
+option{
+    color: #000;
+}
+/* 地址 */
+.data-address{
+    top: -14px;
+    width: 92%;
+    height: 200px;
+    margin: auto;
+    overflow-y: auto;
+    font-size: 14px;
+    color: #000000;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow:0px 0px 8px rgba(150,150,150,0.5);
+    z-index: 99;
+    padding: 6px 8px;
+}
+.data-address .dataEach{
+    padding: 10px 1px;
+    height: 40px;
+    
+}
+.dataEach:hover{
+    background-color: rgba(150,150,150,0.5);
+}
+/* 短信验证码 */
+#address{
+    background-color: #fff;
+}
+/* 文本域固定 */
+textarea{resize:none;}
+/* 上传图片 */
+#imgdiv{
+    width: 70px;
+    height: 70px;
+    background: url('../img/updata.jpg') no-repeat 50%;
+}
+#newimg{
+    width: 100%;
+    height: 100%;
+}
+#bigImg{
+    display: none;
+    color: #f05b72;
+    font-size: 12px;
+}
+/* 字体图标 删除 */
+#texticon{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: rgba(0,0,0,0.5);
+}
+/* 比赛奖项说明 text*/
+.gameshows{
+    margin-bottom: 60px;
+}
+.gameshows h5{
+    color: #B52222;
+}
+.gameshows p{
+    line-height: 23px;
+    font-size: 12px;
+    color: #707070;
+}
+.gameshows span{
+    font-size: 13px;
+    font-weight: 600;
+    color: #434343;
+}
+.gameshows .title{
+    line-height: 10px;
+    font-size: 13px;
+    color: #000000;
+    font-weight: 600;
+}
+
+/* 底部阴影文本框 */
+.bottom-box{
+    position: absolute;;
+    bottom:6%;
+    left:30px;
+    padding: 12px 21px;
+    /* margin:0 auto; */
+    width: 83%;
+    min-height: 90px;
+ 
+    background-color: #ffffff;
+    box-shadow: 0px 0px 8px #EEEEEE;
+}
+.bottom-box p{
+    /* max-width: 100%; */
+    min-width: 80%;
+    font-size: 11px;
+    line-height: 18px;
+    color: #000000;
+}
+.bottom-box p span{
+    margin-left: 3%;
+    color: #a8a8a8
+}
+.bottom-box p a{
+    color: #ff0000;
+}
+/* //举报 */
+#report{
+    margin-top: 12px;
+    margin-bottom: 6px;
+    height: 20px;
+}
+#report a{
+    float: right;
+    color: #a8a8a8;
+}
+#btn{
+    width: 40%;
+    background-color: #C0DAED;
+    border-color: #C0DAED;
+}
+/* 结语 */
+.footer{
+    height: 50px;
+    line-height: 50px;
+    color: #DCD4CD;
+    text-align: center;
+    font-size: 14px;
+}
+.colorb{
+    color:#3084C3;
+}
+

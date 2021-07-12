@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-3.5.1/jquery-3.5.1.min.js"></script>
+	<style type="text/css">
+		img{
+			width:100%;
+			height:100%;
+			filter: grayscale(100%);
+		}
+		#ring-up{
+			position: fixed;
+			right: 0;
+			bottom: 20px;
+			width: 50px;
+			height: 100px;
+			background-color: #FBFBFB;
+			border-radius: 22px;
+		}
+		#ring-up>div{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		#left:hover,
+		#right:hover{
+			box-shadow: 0 1px 10px 0 rgb(0 0 0 / 10%);
+			background-color:#FBFBFB;
+		}
+		
+	</style>
+	</head>
+	<body>
+		<div id="box">
+			<img src="img/backimg1.jpg" alt="" id="img1">
+		</div>
+
+		<div id="ring-up">
+			<div id="left">00</div>
+			<div id="right">11</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	let o = 100;
+	$("#img1").click(function(){
+		console.log(o)
+		// $(this).css({"filter":"grayscale("+o+"%)" })
+		setTime($(this))
+	})
+	
+	function setTime(el){
+		if(o == 0){
+			return
+		}else{
+			el.css({"filter":"grayscale("+o+"%)" })
+			o = o-20
+		}
+		console.log(o)
+		setTimeout(function(){
+			setTime(el)
+		},500)
+	}
+</script>

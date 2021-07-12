@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">	
+		<title>报名通道</title>
+		<link rel="shortcut icon" href="img/logo.jpg">
+		<link rel="stylesheet" type="text/css" href="bootstrap-3.4.1-dist/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery-3.5.1/jquery-3.5.1.min.js"></script>
+	</head>
+	<body>
+		<!-- top -->
+		<div class="header">
+			<img src="./img/top.jpg" alt="" width="100%">
+
+			<div class="header-div">
+				<div class="header-title">
+					<p style="margin: 0;">第十七届全国语文规范化知识学习活动暨【2021河南首届语言文字艺术节】</p> 
+				</div>
+				<div class="header-text">
+					<p>全国语文规范化知识学习活动口号是”爱我母语，爱我中华”，领导单位是教育部语言文字应用管理司
+						，由中国教育学会、中国语文报刊协会、中国语文现代化学会、叶圣陶研究会、中国文字学会、中国
+						广播电视协会共同发起，中国语文报刊协会主办，《语文世界》 杂志社承办的针对全国大中小学师
+						生和社会各界人士的全国性学习活动。活动分设小学组、中学组、大学、教师、社会组，目前已经
+						举办了十六届，参与人数超百万。</p>
+				</div>
+				<div class="header-refer">
+					<p>详情请咨询活动办公室。</p>
+					<p>联系人: </p>
+					<p>电话: </p>
+					<p>联系地址: </p>
+					<p>电子邮箱: zghnvwafhzsxx@163.com</p>
+				</div>
+				<div class="article">
+					<img src="./img/yyy.jpg" alt="" width="100%">
+				</div>
+			</div>
+			
+		</div>
+		<!-- 表单项 -->
+		<div class="row">
+			<div class="col-md-12">
+				<h3>请填写您的报名信息</h3>
+				<hr>
+			</div>
+			<!-- 浮动图标 -->
+			<div id="ring-up">
+					<a href="tel:10086">
+						<img src="img/ringup.jpg" alt="">
+					</a>	
+			</div>
+
+		 <form name="information" 
+			   id="personForm"
+			   action="##"
+			   enctype="multipart/form-data"
+			   method="GET">
+			 
+		   <div class="form-group must col-md-12">
+			 <label class="">参赛者姓名</label>
+			 <img src="img/name.jpg" alt="" class="back-img">
+		     <input type="text" class="form-control rela" required id="name" name="name" onblur="nameCheck()" placeholder="请填写姓名">
+		   </div>
+
+		   <div class="form-group must col-md-12">
+				<label>性别</label><br>
+				<select class="form-control" name="sex" required onblur="radio()">
+					<option value="" selected id="hidex">男 / 女 </option>
+					<option value="男">男</option>	
+					<option value="女">女</option>
+				</select>
+		   </div>
+		   <div class="form-group must col-md-12">
+				<label class="">身份证号</label>
+				<input type="text" class="form-control" id="identity" name="identity" onblur="idEntity()" placeholder="请填写身份证">
+		   </div>
+
+			<div class="form-group must col-md-12">
+				<label>类别</label><br>
+				<!-- style="border-radius: 4px 4px 0 0;" -->
+				<div class="checkdiv">
+					<input type="checkbox" name="classes" id="radio4" value="说好普通话">说好普通话
+				</div>
+				<div class="checkdiv bordernone">
+					<input type="checkbox" name="classes" id="radio5" value="写好中国字">写好中国字
+				</div>
+				<!-- style="border-radius:  0 0 4px 4px;" -->
+				<div class="checkdiv">
+					<input type="checkbox" name="classes" id="radio6" value="讲好中国故事">讲好中国故事
+				</div>
+			</div>
+			
+		    <div class="form-group must col-md-12">
+				<label>组别</label><br>
+				<!-- style="border-radius: 4px 4px 0 0;" -->
+				<div class="checkdiv">
+					<input type="checkbox" name="group" id="radio1" value="小学组">小学组
+				</div>
+				<div class="checkdiv bordernone">
+					<input type="checkbox" name="group" id="radio2" value="中学组">中学组
+				</div>
+				<!-- style="border-radius: 0 0 4px 4px;" -->
+				<div class="checkdiv">
+					<input type="checkbox" name="group" id="radio3" value="大学组,教师组,社会组">大学组,教师组,社会组
+				</div>
+			</div>
+
+			<div class="form-group must col-md-12">
+				<label>就读学校或所在单位</label>
+					<input type="text" id="address" name="address" value="" class="form-control" autocomplete="on" placeholder="请填写地址">
+			</div>
+
+		    <div class="form-group must  col-md-12">
+				<label>联系方式</label>
+				<img src="./img/tel.jpg" alt="" class="back-img">
+		   	 	<input type="text" class="form-control rela" id="phone" name="tel" onblur="Phone()" placeholder="请填写联系方式">
+			</div>
+			<div class="form-group must  col-md-12">
+				<label>短信验证码</label>
+				<img src="./img/note.jpg" alt="" class="back-img">
+				<!-- oninput="value=value.replace(/[^\d]/g,'')" -->
+				<input type="text" class="form-control rela" id="note" value=""  placeholder="验证码">
+				<div id="btn-note">
+					<button type="button" id="btn-data">发送验证码</button>
+				</div>
+			</div>
+		  	 <!-- 上传图片 -->
+		  	 <div class="form-group col-md-12">
+				<label>照片</label>
+				<span id="bigImg">(*图片过大)</span>  
+				<br>
+				<label style="font-size: 13px;color: rgba(54, 52, 52, 0.699);font-weight: 600;">
+					(支持jpg/png,每张图片大小不能超过10M)
+				</label>
+				<div>
+					<div id="uptexticon" style="position: relative;width: 83px;height: 18px;"></div>
+					<div id="imgdiv" onclick="$('#file1').click()"></div>
+					<input class="imgupload" id="file1" name="ImageFile" accept="image/jpeg, image/jpg, image/png" 
+					onchange="showImg(this)" type="file" style="display: none;"/>
+       	 		</div>
+				
+			   </div>
+			<!-- 比赛奖项说明 text -->
+			<div class="col-md-12 gameshows">
+				<h5>比赛及奖项设置说明</h5>
+				<p class="title">一、初赛:</p>
+				<P>
+					1、小学组、中学组为试卷答题，校内统一答题，由校内老师配合工作人员收发试卷，统一批改;<br/>
+					2、高校、社会组为在线答题，在规定的时间内完成作答;<br/>
+					3、初始试题为趣味性语言、文字试题，时长10分钟,
+				</P>
+				<P class="title">二、复赛:</P>
+				<P>
+					1、复赛统一采用线上答题的模式，小学组、中学组为周六日在校内或家里在规定的时间内完成线上作答。高校组、社会组根据统一的时间安排，在规定的时间内完成线上作答;<br>
+					2、复试试题为趣味性语言文化、使用常识试题，时长30分钟,<br>
+					3、复试成绩统计后,公示参与活动的成绩与名单。
+				</P>
+				<P class="title">三、总决赛:</P>
+				<p>
+					1、总决赛阶段在12月25日-12月26日两天统一发放试卷，参赛选手统-答题;<br>
+					2、总决赛试题为语言文字综合运用测试，时长1小时;<br>
+					3、总决赛当天现场完成试卷批改，评选出各级奖项。
+				</p>
+				<p class="title">复赛获奖奖项:</p>
+				<p>
+					<span>未成年组礼包内含  (小学) :</span>订制帆布袋、第十七届语文规范化知识学习活动专刊、少年儿童学党史书籍、订制文具套装、艺术节专属微章、优惠券套装。<br>
+					<span>未成年组礼包二内含  (中学) :</span>订制帆布袋、第十七届语文规范化知识学习活动专刊、少年儿童学国史书籍、订制文具套装、艺术节专属徼章、优惠券套装。<br>
+					<span>成年组礼包一内含  (高校) :</span>订制帆布袋、第十七届语文规范化知识学习活动专刊、中国梦书籍、订制文具套装、艺术节专属徽章、优惠券套装。<br>
+					<span>成年组礼包二内含  (社会) :</span>订制帆布袋、第十七届语文规范化知识学习活动专刊、党的建设永远在路上书籍、订制文具套装、艺术节专属徽章、优惠券套装。
+				</p>
+				<p class="title">决赛获奖奖项:</p>
+				<p>
+					<span>一等奖:</span> 华为MateBook 16轻薄高性能办公笔记本<br>
+					<span>二等奖:</span> 华为平板MatePad 10.8英寸<br>
+					<span>三等奖:</span> 华为HUAWEI FreeBuds 4i
+				</p>
+			</div>
+			<!-- 底部阴影框文字 -->
+			<div class="bottom-box">
+				<p>说好普通话、写好中国字、讲好中国故事，作品收集<span>(与上述报名活动不冲突)</span></p>
+				<p>详情请点链接 : <a href="##">wwwwwwww</a></p>
+		    </div>
+
+
+		  	<!-- <div class="checkbox col-md-1">
+		  	   <label >
+		    	   <input type="checkbox"> Check me out
+		    	</label>
+			</div> -->
+		   	<div class="col-md-12"  style="text-align: center;margin-top: 220px;">
+			   <button type="button" class="btn btn-info" id="btn">提 交</button>
+			</div>
+		 </form>
+		 
+			 <div class="col-md-12" id="report">
+				<a href="http://www.baidu.com">举报</a>
+			</div>
+		</div>
+		<!-- //结语 -->
+		<div class="footer">
+			提交即授权该表单收集您的填写信息
+		</div>
+	</body>
+	<script src="js/index.js"></script>	
+</html>
